@@ -1,0 +1,130 @@
+.experience {
+    background-color: var(--oxford-blue);
+    padding: 5rem 2rem;
+  }
+  
+  .experience h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The vertical line */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #30363d; /* Darker line */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+  }
+  
+  .timeline-item {
+    padding: 1rem 3rem;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box; /* Crucial for preventing overflow */
+  }
+  
+  /* The circle on the timeline */
+  .timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: var(--oxford-blue);
+    border: 4px solid var(--electric-blue);
+    top: 25px;
+    border-radius: 50%;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Left-side items */
+  .timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: 50px; /* Space from the center line */
+  }
+  
+  .timeline-item:nth-child(odd)::after {
+    right: -12px; /* Position dot exactly on the line */
+  }
+  
+  /* Right-side items */
+  .timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 50px; /* Space from the center line */
+  }
+  
+  .timeline-item:nth-child(even)::after {
+    left: -12px; /* Position dot exactly on the line */
+  }
+  
+  .timeline-item:hover::after {
+      background-color: var(--electric-blue);
+  }
+  
+  .timeline-content {
+    padding: 1.5rem;
+    background-color: var(--rich-black);
+    border-radius: 8px;
+    border: 1px solid #30363d;
+    box-shadow: var(--card-shadow);
+    position: relative;
+  }
+  
+  .timeline-content h3 {
+      color: var(--electric-blue);
+  }
+  .timeline-content .company {
+      color: var(--slate-gray);
+      font-weight: 600;
+      margin: 0.5rem 0;
+  }
+  .timeline-content .period {
+      font-size: 0.9rem;
+      color: var(--light-slate);
+      display: block;
+      margin-bottom: 1rem;
+  }
+  .timeline-content ul {
+      padding-left: 20px;
+      margin: 0;
+      color: var(--light-slate);
+      line-height: 1.6;
+  }
+  
+  /* --- RESPONSIVE STYLES for MOBILE --- */
+  @media screen and (max-width: 768px) {
+    /* Make the line go down the left side */
+    .timeline::after {
+      left: 20px;
+    }
+  
+    /* Full-width containers */
+    .timeline-item {
+      width: 100%;
+      padding-left: 60px; /* Push content to the right of the line */
+      padding-right: 15px;
+    }
+    
+    /* Bring all items to the left */
+    .timeline-item:nth-child(odd) {
+      left: 0;
+    }
+    .timeline-item:nth-child(even) {
+      left: 0;
+    }
+  
+    /* Move all dots to the left side */
+    .timeline-item::after {
+      left: 8px;
+    }
+  }

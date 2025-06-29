@@ -1,0 +1,51 @@
+.contact {
+    background-color: var(--rich-black);
+    text-align: center;
+    padding: 4rem 2rem;
+    border-top: 1px solid #30363d;
+  }
+  .contact h2 {
+      color: var(--slate-gray);
+  }
+  .contact p {
+      color: var(--light-slate);
+      max-width: 500px;
+      margin: 1rem auto 2rem;
+  }
+  .email-link {
+    display: inline-block;
+    margin: 1rem 0 2rem;
+    font-size: 1.2rem;
+    color: var(--electric-blue);
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid var(--electric-blue);
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .email-link:hover {
+      background-color: var(--electric-blue);
+      color: var(--rich-black);
+      box-shadow: var(--glow-shadow);
+  }
+  .social-links {
+      margin: 2rem 0;
+  }
+  .social-links a {
+    color: var(--light-slate);
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .social-links a:hover {
+      color: var(--electric-blue);
+      transform: scale(1.2);
+  }
+  .copyright {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: var(--light-slate);
+    opacity: 0.7;
+  }

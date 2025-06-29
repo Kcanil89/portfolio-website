@@ -1,13 +1,43 @@
+/* --- NEW DARK THEME & FONT DEFINITIONS --- */
+:root {
+  --rich-black: #0D1117;     /* GitHub's dark background */
+  --oxford-blue: #161B22;   /* GitHub's dark surface color */
+  --electric-blue: #30A8F2;  /* A vibrant, glowing accent */
+  --light-slate: #8B949E;   /* Secondary text color */
+  --slate-gray: #CDD5DE;   /* Primary text color */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Source Sans Pro', sans-serif;
+  --glow-shadow: 0 0 15px rgba(48, 168, 242, 0.4);
+  --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-body);
+  background-color: var(--rich-black);
+  color: var(--slate-gray);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--slate-gray);
+}
+
+h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+section {
+  padding: 5rem 2rem;
+  position: relative; /* Needed for z-index to work with particles */
+  z-index: 2;
 }

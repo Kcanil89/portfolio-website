@@ -1,0 +1,28 @@
+.about {
+    background-color: var(--oxford-blue);
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 3rem auto 0;
+}
+.about-image-container img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  border: 2px solid var(--rich-black);
+}
+.about-text h3 {
+  color: var(--electric-blue);
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+.about-text p {
+  line-height: 1.7;
+  color: var(--light-slate);
+  margin-bottom: 1.5rem;
+}

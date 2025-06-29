@@ -1,0 +1,162 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 2rem; /* Add padding for smaller screens */
+    box-sizing: border-box; /* Important for padding */
+  }
+  
+  .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    width: 100%;
+  }
+  
+  .hero-text {
+    max-width: 650px;
+    animation: fadeInText 1s ease-in-out;
+  }
+  
+  /* --- THE CORE FIX for the GAP --- */
+  /* We are explicitly removing the default top and bottom margins from all text elements */
+  .hero-text h1,
+  .hero-text p,
+  .hero-text span.intro-text {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  /* --- Styling for Individual Text Elements --- */
+  .intro-text {
+    color: var(--electric-blue);
+    font-weight: 600;
+    font-size: 1.2rem;
+    display: block; /* Ensures it takes up its own line */
+  }
+  
+  .hero-text h1 {
+    font-size: 4.5rem;
+    color: var(--slate-gray);
+    font-weight: 700;
+    margin-top: 0.5rem; /* Add specific spacing back */
+    margin-bottom: 1rem;
+  }
+  
+  .tagline {
+    font-size: 2rem;
+    font-weight: 500;
+    min-height: 60px; /* Prevents layout shift as typewriter text changes length */
+    margin-bottom: 1rem;
+  }
+  
+  .tagline span {
+    color: var(--electric-blue);
+    font-weight: 700;
+  }
+  
+  .hero-description {
+    font-size: 1.1rem;
+    color: var(--light-slate);
+    line-height: 1.6;
+  }
+  
+  /* --- THE CORE FIX for BUTTON ALIGNMENT --- */
+  .hero-buttons {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center; /* This vertically centers the buttons */
+  }
+  
+  .cta-button, .cta-button-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; /* Horizontally centers content within the button */
+    gap: 0.75rem;
+    padding: 0.9rem 2.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .cta-button {
+    background-color: var(--electric-blue);
+    color: var(--rich-black);
+    border: 2px solid var(--electric-blue);
+    box-shadow: var(--glow-shadow);
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(48, 168, 242, 0.6);
+  }
+  
+  .cta-button-outline {
+    background-color: transparent;
+    color: var(--electric-blue);
+    border: 2px solid var(--electric-blue);
+  }
+  
+  .cta-button-outline:hover {
+    background-color: var(--electric-blue);
+    color: var(--rich-black);
+    box-shadow: var(--glow-shadow);
+  }
+  
+  
+  /* --- Image Styling --- */
+  .hero-image-container {
+    position: relative;
+    animation: fadeInImage 1s ease-in-out 0.2s backwards;
+  }
+  
+  .hero-image {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--oxford-blue);
+    box-shadow: 0 0 40px rgba(0,0,0,0.6), var(--glow-shadow);
+  }
+  
+  /* --- Animations --- */
+  @keyframes fadeInText {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes fadeInImage {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  
+  /* --- Responsive Styles for Mobile --- */
+  @media screen and (max-width: 992px) {
+    .hero-content {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+    .hero-text {
+      max-width: 100%;
+    }
+    .hero-buttons {
+      justify-content: center;
+    }
+    .hero-image {
+      width: 280px;
+      height: 280px;
+    }
+    .hero-text h1 {
+      font-size: 3.5rem;
+    }
+    .tagline {
+      font-size: 1.5rem;
+    }
+  }
