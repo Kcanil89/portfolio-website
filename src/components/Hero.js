@@ -4,7 +4,7 @@ import './Hero.css';
 
 const Hero = () => {
   const [text] = useTypewriter({
-    words: ['Full-Stack Developer', 'PHP & Laravel Expert', 'React Enthusiast', 'WordPress Specialist'],
+    words: ['Full-Stack Developer', 'PHP & Laravel Developer', 'React Enthusiast', 'WordPress Specialist'],
     loop: true,
     delaySpeed: 2000,
   });
