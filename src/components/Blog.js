@@ -5,7 +5,7 @@ import './Blog.css';
 const Blog = () => {
   return (
     <section id="blog" className="blog">
-      <h2>My Adventures</h2>
+      <h2>My Adventures/Blogs</h2>
       <p className="section-subtitle">
         When I'm not coding, I'm usually seeking the next adrenaline rush. Here are a few of my favorite moments.
       </p>
